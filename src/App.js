@@ -1,23 +1,43 @@
-import logo from './logo.svg';
 import './App.css';
+import { useQuery, gql } from "@apollo/client";
+import { useState } from "react";
+import SearchBox   from "./SearchBox";
+import SearchResults   from "./SearchResults";
+
+const BOOK_SEARCH_QUERY = gql`
+  query MySearch($q: String!) {
+    search(q: $q) {
+      __typename
+      ... on Book {
+        id
+        title
+      }
+      ... on Review {
+        id
+        book {
+          title
+        }
+        reviewer {
+          name
+        }
+      }
+      ... on User {
+        id
+        name
+      }
+    }
+  }
+`
 
 function App() {
+  const [q, setQ] = useState("awesome ring")
+  const { loading, error, data } = useQuery(BOOK_SEARCH_QUERY, { variables: { q } });
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h2>My first Apollo app 🚀</h2>
+      <SearchBox q={q} setQ={setQ}/>
+      <SearchResults loading={loading} error={error} data={data}/>
     </div>
   );
 }
