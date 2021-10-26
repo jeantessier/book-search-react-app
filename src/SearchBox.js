@@ -1,9 +1,10 @@
 import React from 'react'
 
-export default function SearchBox({ q, setQ }) {
+export default function SearchBox({ q, search }) {
     return (
         <div>
-            <input type="text" value={q}/>
+            <input type="text" name="q" value={q}/>
+            <button onClick={() => search("foobar")}>Search</button>
         </div>
     )
 }

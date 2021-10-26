@@ -31,12 +31,17 @@ const BOOK_SEARCH_QUERY = gql`
 
 function App() {
   const [q, setQ] = useState("awesome ring")
-  const { loading, error, data } = useQuery(BOOK_SEARCH_QUERY, { variables: { q } });
+  const { loading, error, data, refetch } = useQuery(BOOK_SEARCH_QUERY, { variables: { q } });
+
+  const search = text => {
+    setQ(text)
+    refetch({ q: text })
+  }
 
   return (
     <div className="App">
       <h2>My first Apollo app 🚀</h2>
-      <SearchBox q={q} setQ={setQ}/>
+      <SearchBox q={q} search={search}/>
       <SearchResults loading={loading} error={error} data={data}/>
     </div>
   );
