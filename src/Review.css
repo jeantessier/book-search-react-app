@@ -1,0 +1,7 @@
+.review {
+    background-color: lightgrey;
+    border-color: lightslategrey;
+    border-style: dashed;
+    border-width: 3px;
+    padding: 1em;
+}

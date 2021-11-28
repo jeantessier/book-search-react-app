@@ -1,7 +1,8 @@
 import React from 'react'
+import './Book.css'
 
 export default function Book({ id, title }) {
     return (
-        <div data-book-id={id}>Book <i>{title}</i></div>
+        <div class="book" data-book-id={id}>Book <i>{title}</i></div>
     )
 }

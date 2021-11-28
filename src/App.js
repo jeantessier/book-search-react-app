@@ -40,7 +40,7 @@ function App() {
 
   return (
     <div className="App">
-      <h2>My first Apollo app 🚀</h2>
+      <h2>Search Book Reviews</h2>
       <SearchBox q={q} search={search}/>
       <SearchResults loading={loading} error={error} data={data}/>
     </div>

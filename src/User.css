@@ -1,0 +1,7 @@
+.user {
+    background-color: greenyellow;
+    border-color: green;
+    border-style: dashed;
+    border-width: 3px;
+    padding: 1em;
+}

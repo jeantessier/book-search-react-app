@@ -1,0 +1,7 @@
+.book {
+    background-color: hotpink;
+    border-color: deeppink;
+    border-style: dashed;
+    border-width: 3px;
+    padding: 1em;
+}
