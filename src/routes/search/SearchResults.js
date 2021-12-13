@@ -10,7 +10,7 @@ export default function SearchResults({ loading, error, data }) {
     return (
         <div className="search-results">
             {data.search.map(searchResult => (
-                <SearchResult searchResult={searchResult}/>
+                <SearchResult key={searchResult.id} searchResult={searchResult}/>
             ))}
         </div>
     )

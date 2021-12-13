@@ -4,7 +4,7 @@ import ReviewSearchResult from './ReviewSearchResult'
 import UserSearchResult from './UserSearchResult'
 import './SearchResult.css'
 
-export default function SearchResult({ searchResult }) {
+export default function SearchResult({ _key, searchResult }) {
     return (
         <div className="search-result">
             {searchResult.__typename === 'Book' &&
