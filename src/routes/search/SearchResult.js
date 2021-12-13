@@ -6,7 +6,7 @@ import './SearchResult.css'
 
 export default function SearchResult({ searchResult }) {
     return (
-        <div class="search-result">
+        <div className="search-result">
             {searchResult.__typename === 'Book' &&
                 <BookSearchResult id={searchResult.id} title={searchResult.title}/>
             }
