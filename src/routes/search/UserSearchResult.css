@@ -5,3 +5,8 @@
     border-width: 3px;
     padding: 1em;
 }
+
+.user-search-result:hover {
+    background-color: lightgrey;
+    border-style: solid;
+}

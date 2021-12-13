@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import './BookSearchResult.css'
 
 export default function BookSearchResult({ id, title }) {
     return (
-        <div className="book-search-result" data-book-id={id}>Book <i>{title}</i></div>
+        <Link to={`/book/${id}`}>
+            <div className="book-search-result">Book <i>{title}</i></div>
+        </Link>
     )
 }

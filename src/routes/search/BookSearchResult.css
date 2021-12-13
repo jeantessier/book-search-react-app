@@ -1,7 +1,12 @@
 .book-search-result {
-    background-color: hotpink;
+    background-color: lightpink;
     border-color: deeppink;
     border-style: dashed;
     border-width: 3px;
     padding: 1em;
+}
+
+.book-search-result:hover {
+    background-color: lightgrey;
+    border-style: solid;
 }
