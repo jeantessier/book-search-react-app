@@ -1,5 +1,5 @@
 import { useQuery, gql } from "@apollo/client"
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 import UserInfo from './UserInfo'
 import UserReviews from './UserReviews'
 import './User.css'
@@ -26,8 +26,8 @@ export default function User() {
 
     const { loading, error, data } = useQuery(USER_QUERY, { variables: { id } })
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error :(</p>
 
     const { name, email, reviews } = data.user
 

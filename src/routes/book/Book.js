@@ -1,5 +1,5 @@
 import { useQuery, gql } from "@apollo/client"
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"
 import BookInfo from './BookInfo'
 import BookReviews from './BookReviews'
 import './Book.css'
@@ -31,8 +31,8 @@ export default function Book() {
 
     const { loading, error, data } = useQuery(BOOK_QUERY, { variables: { id } })
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p>Error :(</p>;
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error :(</p>
 
     const { titles, authors, years, publisher, reviews } = data.book
 
