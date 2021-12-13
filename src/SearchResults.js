@@ -8,7 +8,7 @@ export default function SearchResults({ loading, error, data }) {
     if (data.search.length === 0) return null
 
     return (
-        <div class="search_results">
+        <div class="search-results">
             {data.search.map(searchResult => (
                 <SearchResult searchResult={searchResult}/>
             ))}
