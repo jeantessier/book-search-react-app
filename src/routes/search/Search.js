@@ -29,8 +29,10 @@ const BOOK_SEARCH_QUERY = gql`
   }
 `
 
-export default function Search({defaultQuery}) {
-  const [q, setQ] = useState(defaultQuery)
+const DEFAULT_QUERY = "awesome ring"
+
+export default function Search() {
+  const [q, setQ] = useState(DEFAULT_QUERY)
   const { loading, error, data, refetch } = useQuery(BOOK_SEARCH_QUERY, { variables: { q } })
 
   const search = text => {

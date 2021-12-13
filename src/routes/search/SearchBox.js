@@ -3,7 +3,7 @@ import './SearchBox.css'
 
 export default function SearchBox({ q, search }) {
     return (
-        <div class="search-box">
+        <div className="search-box">
             <input type="text" name="q" value={q} onChange={e => search(e.target.value)}/>
         </div>
     )
