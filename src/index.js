@@ -9,6 +9,7 @@ import {
 } from '@apollo/client'
 import App from './App'
 import Search from './routes/search'
+import NotFound from './routes/notfound'
 import './index.css'
 
 const client = new ApolloClient({
@@ -24,11 +25,7 @@ ReactDOM.render(
                   <Route path="/" element={<App/>}>
                       <Route index element={<Search/>}/>
                       <Route path="search" element={<Search/>}/>
-                      <Route
-                          path="*"
-                          element={
-                              <p>There is nothing here!</p>
-                          }/>
+                      <Route path="*" element={<NotFound/>}/>
                   </Route>
               </Routes>
           </BrowserRouter>
