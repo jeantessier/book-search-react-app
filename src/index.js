@@ -10,6 +10,7 @@ import {
 import App from './App'
 import Search from './routes/search'
 import Book from './routes/book'
+import Review from './routes/review'
 import User from './routes/user'
 import NotFound from './routes/notfound'
 import './index.css'
@@ -28,6 +29,7 @@ ReactDOM.render(
                       <Route index element={<Search/>}/>
                       <Route path="search" element={<Search/>}/>
                       <Route path="book/:id" element={<Book/>}/>
+                      <Route path="review/:id" element={<Review/>}/>
                       <Route path="user/:id" element={<User/>}/>
                       <Route path="*" element={<NotFound/>}/>
                   </Route>
