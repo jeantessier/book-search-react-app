@@ -1,0 +1,14 @@
+.review .body {
+    margin: 2em;
+    text-align: left;
+}
+
+.review span:first-child  {
+    font-weight: bold;
+}
+
+code {
+    background-color: #def;
+    border-radius: 0.33em;
+    padding: 0em 0.25em;
+}

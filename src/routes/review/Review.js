@@ -1,5 +1,8 @@
 import { useQuery, gql } from "@apollo/client"
 import { useParams } from "react-router-dom"
+import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
+import gfm from 'remark-gfm';
 import './Review.css'
 
 const REVIEW_QUERY = gql`
@@ -32,7 +35,11 @@ export default function Review() {
 
     return (
         <div className="review">
-            <div className="body">{body}</div>
+            <div className="book">
+                <span>Book: </span>
+                <span>{book.title}</span>
+            </div>
+            <div className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></div>
             <div className="start">
                 <span>Start: </span>
                 <span>{start}</span>
@@ -41,11 +48,7 @@ export default function Review() {
                 <span>Stop: </span>
                 <span>{stop ? stop : "In progress"}</span>
             </div>
-            <div className="start">
-                <span>Book: </span>
-                <span>{book.title}</span>
-            </div>
-            <div className="start">
+            <div className="reviewer">
                 <span>Reviewer: </span>
                 <span>{reviewer.name}</span>
             </div>
