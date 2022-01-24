@@ -1,5 +1,5 @@
 import { useQuery, gql } from "@apollo/client"
-import { useParams } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import ReactMarkdown from 'react-markdown';
 import rehypeRaw from 'rehype-raw';
 import gfm from 'remark-gfm';
@@ -37,7 +37,7 @@ export default function Review() {
         <div className="review">
             <div className="book">
                 <span>Book: </span>
-                <span>{book.title}</span>
+                <span><Link to={`/book/${book.id}`}>{book.title}</Link></span>
             </div>
             <div className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></div>
             <div className="start">
@@ -50,7 +50,7 @@ export default function Review() {
             </div>
             <div className="reviewer">
                 <span>Reviewer: </span>
-                <span>{reviewer.name}</span>
+                <span><Link to={`/user/${reviewer.id}`}>{reviewer.name}</Link></span>
             </div>
         </div>
     )
