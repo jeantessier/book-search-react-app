@@ -39,7 +39,7 @@ export default function Review() {
                 <span>Book: </span>
                 <span><Link to={`/book/${book.id}`}>{book.title}</Link></span>
             </div>
-            <div className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} plugins={[gfm]} children={body}/></div>
+            <div className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></div>
             <div className="start">
                 <span>Start: </span>
                 <span>{start}</span>
