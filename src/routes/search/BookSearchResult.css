@@ -1,12 +1,12 @@
 .book-search-result {
-    background-color: lightpink;
-    border-color: deeppink;
-    border-style: dashed;
+    border-color: lightpink;
+    border-radius: 1rem;
+    border-style: solid;
     border-width: 3px;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .book-search-result:hover {
-    background-color: lightgrey;
-    border-style: solid;
+    background-color: lightpink;
+    border-color: deeppink;
 }

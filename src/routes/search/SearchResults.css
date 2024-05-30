@@ -1,5 +1,6 @@
 .search-results {
-    background-color: antiquewhite;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    display: grid;
+    grid-template-columns: 1fr max-content   1fr;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
 }

@@ -1,12 +1,12 @@
 .review-search-result {
-    background-color: lightskyblue;
-    border-color: cornflowerblue;
-    border-style: dashed;
+    border-color: lightskyblue;
+    border-radius: 1rem;
+    border-style: solid;
     border-width: 3px;
-    padding: 1em;
+    padding: 1rem;
 }
 
 .review-search-result:hover {
-    background-color: lightgrey;
-    border-style: solid;
+    background-color: lightskyblue;
+    border-color: cornflowerblue;
 }

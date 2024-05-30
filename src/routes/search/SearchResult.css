@@ -1,5 +1,8 @@
 .search-result {
-    margin: 1em;
+    grid-column: 2;
+    justify-self: center;
+    margin: 0.5rem;
+    width: 100%;
 }
 
 .search-result a {

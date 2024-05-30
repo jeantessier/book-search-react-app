@@ -1,3 +1,17 @@
+.user-review {
+    display: contents;
+}
+
+a {
+    display: contents;
+}
+
 .user-review .start {
-    margin-right: 0.66em;
+    grid-column: 2;
+    justify-self: end;
+}
+
+.user-review .book {
+    grid-column: 3;
+    justify-self: start;
 }

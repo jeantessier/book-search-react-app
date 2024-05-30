@@ -1,0 +1,5 @@
+.user-reviews .container {
+    column-gap: 0.66rem;
+    display: grid;
+    grid-template-columns: 1fr max-content auto 1fr;
+}

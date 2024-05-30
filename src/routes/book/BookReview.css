@@ -1,3 +1,17 @@
+.book-review {
+    display: contents;
+}
+
+a {
+    display: contents;
+}
+
 .book-review .start {
-    margin-right: 0.66em;
+    grid-column: 2;
+    justify-self: end;
+}
+
+.book-review .reviewer {
+    grid-column: 3;
+    justify-self: start;
 }
