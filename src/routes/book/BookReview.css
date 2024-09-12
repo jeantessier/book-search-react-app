@@ -1,14 +1,16 @@
-.book-review {
+a {
     display: contents;
 }
 
-a {
+.book-review {
     display: contents;
 }
 
 .book-review .start {
     grid-column: 2;
     justify-self: end;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    color: darkslategray;
 }
 
 .book-review .reviewer {

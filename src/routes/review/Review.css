@@ -7,6 +7,10 @@
     font-weight: bold;
 }
 
+.review .start span:last-child, .review .stop span:last-child {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
 code {
     background-color: #def;
     border-radius: 0.33rem;
