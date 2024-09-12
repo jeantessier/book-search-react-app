@@ -6,7 +6,7 @@ export default function UserReview({ id, start, book }) {
         <Link to={`/review/${id}`}>
             <div className="user-review">
                 <span className="start">{start}</span>
-                <span className="book">{book.title}</span>
+                <span className="book" dangerouslySetInnerHTML={{__html: book.title }}/>
             </div>
         </Link>
     )

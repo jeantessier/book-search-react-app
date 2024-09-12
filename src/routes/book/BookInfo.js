@@ -8,28 +8,24 @@ export default function BookInfo({ titles, authors, years, publisher }) {
                 <span>
                     {titles.map(title => {
                         if (title.link) {
-                            return <p key={title.title}><a href={title.link}>{title.title}</a></p>
+                            return <p key={title.title}><a href={title.link} dangerouslySetInnerHTML={{__html: title.title }}/></p>
                         } else {
-                            return <p key={title.title}>{title.title}</p>
+                            return <p key={title.title} dangerouslySetInnerHTML={{__html: title.title }}/>
                         }
                     })}
                 </span>
             </div>
             <div className="authors">
                 <span>Authors: </span>
-                <span>
-                    {authors.join(", ")}
-                </span>
+                <span dangerouslySetInnerHTML={{__html: authors.join(", ") }}/>
             </div>
             <div className="years">
                 <span>Years: </span>
-                <span>
-                    {years.join(", ")}
-                </span>
+                <span dangerouslySetInnerHTML={{__html: years.join(", ") }}/>
             </div>
             <div className="publisher">
                 <span>Publisher: </span>
-                <span>{publisher}</span>
+                <span dangerouslySetInnerHTML={{__html: publisher }}/>
             </div>
         </div>
     )

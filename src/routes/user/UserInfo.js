@@ -5,7 +5,7 @@ export default function UserInfo({ name, email }) {
         <div className="user-info">
             <div className="name">
                 <span>Name: </span>
-                <span>{name}</span>
+                <span dangerouslySetInnerHTML={{__html: name }}/>
             </div>
             <div className="publisher">
                 <span>Email: </span>

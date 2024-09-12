@@ -37,7 +37,7 @@ export default function Review() {
         <div className="review">
             <div className="book">
                 <span>Book: </span>
-                <span><Link to={`/book/${book.id}`}>{book.title}</Link></span>
+                <span><Link to={`/book/${book.id}`} dangerouslySetInnerHTML={{__html: book.title }}/></span>
             </div>
             <div className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></div>
             <div className="start">
@@ -50,7 +50,7 @@ export default function Review() {
             </div>
             <div className="reviewer">
                 <span>Reviewer: </span>
-                <span><Link to={`/user/${reviewer.id}`}>{reviewer.name}</Link></span>
+                <span><Link to={`/user/${reviewer.id}`} dangerouslySetInnerHTML={{__html: reviewer.name }}/></span>
             </div>
         </div>
     )
