@@ -1,8 +1,8 @@
 import { useQuery, gql } from "@apollo/client"
 import { Link, useParams } from "react-router-dom"
-import ReactMarkdown from 'react-markdown';
-import rehypeRaw from 'rehype-raw';
-import gfm from 'remark-gfm';
+import ReactMarkdown from 'react-markdown'
+import rehypeRaw from 'rehype-raw'
+import gfm from 'remark-gfm'
 import './Review.css'
 
 const REVIEW_QUERY = gql`
