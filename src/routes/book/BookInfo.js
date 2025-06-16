@@ -4,28 +4,22 @@ export default function BookInfo({ titles, authors, years, publisher }) {
     return (
         <div className="book-info">
             <div className="titles">
-                <span>Titles: </span>
-                <span>
-                    {titles.map(title => {
-                        if (title.link) {
-                            return <p key={title.title}><a href={title.link} dangerouslySetInnerHTML={{__html: title.title }}/></p>
-                        } else {
-                            return <p key={title.title} dangerouslySetInnerHTML={{__html: title.title }}/>
-                        }
-                    })}
-                </span>
+                <span>Titles</span>
+                {titles.map(title => {
+                    if (title.link) {
+                        return <span key={title.title}><a href={title.link} dangerouslySetInnerHTML={{__html: title.title }}/></span>
+                    } else {
+                        return <span key={title.title} dangerouslySetInnerHTML={{__html: title.title }}/>
+                    }
+                })}
             </div>
-            <div className="authors">
-                <span>Authors: </span>
-                <span dangerouslySetInnerHTML={{__html: authors.join(", ") }}/>
-            </div>
-            <div className="years">
-                <span>Years: </span>
-                <span dangerouslySetInnerHTML={{__html: years.join(", ") }}/>
-            </div>
-            <div className="publisher">
-                <span>Publisher: </span>
-                <span dangerouslySetInnerHTML={{__html: publisher }}/>
+            <div className="details">
+                    <span className="detail-name">Authors:</span>
+                    <span className="detail-value" dangerouslySetInnerHTML={{__html: authors.join(", ")}}/>
+                    <span className="detail-name">Years:</span>
+                    <span className="detail-value" dangerouslySetInnerHTML={{__html: years.join(", ")}}/>
+                    <span className="detail-name">Publisher:</span>
+                    <span className="detail-value" dangerouslySetInnerHTML={{__html: publisher}}/>
             </div>
         </div>
     )

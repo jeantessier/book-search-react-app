@@ -1,3 +1,14 @@
-.user-info span:first-child  {
+.user-info .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+.user-info .details .detail-name {
+    justify-self: right;
     font-weight: bold;
+}
+
+.user-info .details .detail-value {
+    justify-self: left;
 }

@@ -1,14 +1,35 @@
-.review .body {
-    margin: 2rem;
+.review .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+    align-items: baseline;
+}
+
+.review .details .detail-name {
+    justify-self: right;
+    font-weight: bold;
+}
+
+.review .details .detail-value {
+    justify-self: left;
     text-align: left;
+}
+
+.review .details .body {
+    grid-column: 1 / -1;
+    justify-self: center;
+    margin: 1rem;
+    text-align: justify;
+    max-width: 50rem;
 }
 
 .review span:first-child  {
     font-weight: bold;
 }
 
-.review .start span:last-child, .review .stop span:last-child {
+.date {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: smaller;
 }
 
 code {

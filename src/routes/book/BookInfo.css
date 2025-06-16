@@ -1,3 +1,24 @@
-.book-info span:first-child  {
+.book-info .titles span:first-child {
     font-weight: bold;
+}
+
+.book-info .titles {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.book-info .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 0.5rem;
+}
+
+.book-info .details .detail-name {
+    font-weight: bold;
+    justify-self: right;
+}
+
+.book-info .details .detail-value {
+    justify-self: left;
 }

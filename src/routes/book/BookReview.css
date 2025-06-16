@@ -10,6 +10,7 @@ a {
     grid-column: 2;
     justify-self: end;
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+    font-size: smaller;
     color: darkslategray;
 }
 

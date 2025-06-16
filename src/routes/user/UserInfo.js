@@ -3,13 +3,11 @@ import './UserInfo.css'
 export default function UserInfo({ name, email }) {
     return (
         <div className="user-info">
-            <div className="name">
-                <span>Name: </span>
-                <span dangerouslySetInnerHTML={{__html: name }}/>
-            </div>
-            <div className="publisher">
-                <span>Email: </span>
-                <span>{email}</span>
+            <div className="details">
+                <span className="detail-name">Name:</span>
+                <span className="detail-value" dangerouslySetInnerHTML={{__html: name }}/>
+                <span className="detail-name">Email:</span>
+                <span className="detail-value">{email}</span>
             </div>
         </div>
     )

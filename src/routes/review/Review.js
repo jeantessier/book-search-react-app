@@ -35,22 +35,16 @@ export default function Review() {
 
     return (
         <div className="review">
-            <div className="book">
-                <span>Book: </span>
-                <span><Link to={`/book/${book.id}`} dangerouslySetInnerHTML={{__html: book.title }}/></span>
-            </div>
-            <div className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></div>
-            <div className="start">
-                <span>Start: </span>
-                <span>{start}</span>
-            </div>
-            <div className="stop">
-                <span>Stop: </span>
-                <span>{stop ? stop : "In progress"}</span>
-            </div>
-            <div className="reviewer">
-                <span>Reviewer: </span>
-                <span><Link to={`/user/${reviewer.id}`} dangerouslySetInnerHTML={{__html: reviewer.name }}/></span>
+            <div className="details">
+                <span className="detail-name">Book:</span>
+                <span className="detail-value"><Link to={`/book/${book.id}`} dangerouslySetInnerHTML={{__html: book.title }}/></span>
+                <span className="body"><ReactMarkdown rehypePlugins={[rehypeRaw]} remarkPlugins={[gfm]} children={body}/></span>
+                <span className="detail-name">Start:</span>
+                <span className="detail-value date">{start}</span>
+                <span className="detail-name">Stop:</span>
+                <span className="detail-value date">{stop ? stop : "In progress"}</span>
+                <span className="detail-name">Reviewer:</span>
+                <span className="detail-value"><Link to={`/user/${reviewer.id}`} dangerouslySetInnerHTML={{__html: reviewer.name }}/></span>
             </div>
         </div>
     )
