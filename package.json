@@ -2,6 +2,12 @@
   "name": "book-search-react-app",
   "version": "0.1.0",
   "private": true,
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
   "dependencies": {
     "@apollo/client": "*",
     "@testing-library/dom": "*",
@@ -18,12 +24,6 @@
     "rehype-raw": "*",
     "remark-gfm": "*",
     "web-vitals": "*"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

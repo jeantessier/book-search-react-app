@@ -1,4 +1,3 @@
-import React from 'react'
 import BookSearchResult from './BookSearchResult'
 import ReviewSearchResult from './ReviewSearchResult'
 import UserSearchResult from './UserSearchResult'
