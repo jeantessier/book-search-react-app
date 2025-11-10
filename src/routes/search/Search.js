@@ -1,8 +1,9 @@
-import { useQuery, gql } from "@apollo/client"
-import { useState } from "react"
-import { useSearchParams } from "react-router-dom"
-import SearchBox from "./SearchBox"
-import SearchResults from "./SearchResults"
+import { gql } from '@apollo/client'
+import { useQuery } from '@apollo/client/react'
+import { useState } from 'react'
+import { useSearchParams } from 'react-router-dom'
+import SearchBox from './SearchBox'
+import SearchResults from './SearchResults'
 import './Search.css'
 
 const BOOK_SEARCH_QUERY = gql`

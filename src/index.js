@@ -1,12 +1,9 @@
 import React from 'react'
 import * as ReactDOM from 'react-dom/client'
-import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
-import {
-    ApolloClient,
-    InMemoryCache,
-    ApolloProvider,
-} from '@apollo/client'
+import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloProvider } from '@apollo/client/react'
 import App from './App'
 import Search from './routes/search'
 import Book from './routes/book'
