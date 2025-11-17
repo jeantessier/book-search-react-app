@@ -1,4 +1,3 @@
-import React from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import reportWebVitals from './reportWebVitals'
