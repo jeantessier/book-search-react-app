@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 import { useQuery } from '@apollo/client/react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useParams } from 'react-router'
 import ReactMarkdown from 'react-markdown'
 import rehypeRaw from 'rehype-raw'
 import gfm from 'remark-gfm'

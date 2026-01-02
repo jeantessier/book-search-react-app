@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import './BookSearchResult.css'
 
 export default function BookSearchResult({ id, title }) {

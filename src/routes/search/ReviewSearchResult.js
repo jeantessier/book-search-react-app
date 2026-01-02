@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import './ReviewSearchResult.css'
 
 export default function ReviewSearchResult({ id, title, name }) {

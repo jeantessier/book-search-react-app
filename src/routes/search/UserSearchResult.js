@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router'
 import './UserSearchResult.css'
 
 export default function UserSearchResult({ id, name }) {

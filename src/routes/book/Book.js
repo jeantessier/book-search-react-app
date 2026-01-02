@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client'
 import { useQuery } from '@apollo/client/react'
-import { useParams } from 'react-router-dom'
+import { useParams } from 'react-router'
 import BookInfo from './BookInfo'
 import BookReviews from './BookReviews'
 import './Book.css'

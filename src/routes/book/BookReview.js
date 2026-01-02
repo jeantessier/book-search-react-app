@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link } from "react-router"
 import './BookReview.css'
 
 export default function BookReview({ id, start, reviewer }) {
