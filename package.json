@@ -9,21 +9,21 @@
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "@apollo/client": "*",
-    "@testing-library/dom": "*",
-    "@testing-library/jest-dom": "*",
-    "@testing-library/react": "*",
-    "@testing-library/user-event": "*",
-    "@types/react": "*",
-    "graphql": "*",
-    "react": "*",
-    "react-dom": "*",
-    "react-markdown": "*",
-    "react-router-dom": "*",
-    "react-scripts": "*",
-    "rehype-raw": "*",
-    "remark-gfm": "*",
-    "web-vitals": "*"
+    "@apollo/client": "^4.0.11",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.9.1",
+    "@testing-library/react": "^16.3.1",
+    "@testing-library/user-event": "^14.6.1",
+    "@types/react": "^19.2.7",
+    "graphql": "^16.12.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3",
+    "react-markdown": "^10.1.0",
+    "react-router-dom": "^7.11.0",
+    "react-scripts": "^5.0.1",
+    "rehype-raw": "^7.0.0",
+    "remark-gfm": "^4.0.1",
+    "web-vitals": "^5.1.0"
   },
   "browserslist": {
     "production": [
