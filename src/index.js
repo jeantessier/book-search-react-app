@@ -1,7 +1,8 @@
+import { StrictMode } from 'react'
 import * as ReactDOM from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router'
 import reportWebVitals from './reportWebVitals'
-import { ApolloClient, InMemoryCache } from '@apollo/client'
+import { ApolloClient, HttpLink, InMemoryCache } from '@apollo/client'
 import { ApolloProvider } from '@apollo/client/react'
 import App from './App'
 import Search from './routes/search'
@@ -12,14 +13,16 @@ import NotFound from './routes/notfound'
 import './index.css'
 
 const client = new ApolloClient({
-    uri: "http://localhost:4000/",
+    link: new HttpLink({
+        uri: "http://localhost:4000/"
+    }),
     cache: new InMemoryCache()
 })
 
 ReactDOM.createRoot(
     document.getElementById('root')
 ).render(
-  <React.StrictMode>
+  <StrictMode>
       <ApolloProvider client={client}>
           <BrowserRouter>
               <Routes>
@@ -34,7 +37,7 @@ ReactDOM.createRoot(
               </Routes>
           </BrowserRouter>
       </ApolloProvider>
-  </React.StrictMode>
+  </StrictMode>
 )
 
 // If you want to start measuring performance in your app, pass a function
