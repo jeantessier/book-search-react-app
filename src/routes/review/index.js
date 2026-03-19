@@ -1,3 +1,1 @@
-import Review from "./Review"
-
-export default Review
+export { default as Review } from './Review'
